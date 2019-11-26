@@ -60,7 +60,7 @@ function addUser () {
 
 function veriLog (response, passlogin, emailLog) {
   var datas = response.data  
-  var pass = datas.contraseña
+  var pass = datas.password
   if (pass == passlogin) {
     window.location.assign('Home.html')
     Cookies.set('name', datas.nombre)
