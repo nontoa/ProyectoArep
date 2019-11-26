@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Register</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link href="../layout/styles/layout.css" rel="stylesheet" type="text/css" media="all">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+        integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src=" https://unpkg.com/sweetalert/dist/sweetalert.min.js ">
+    </script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+</head>
+
+
+<body id="top">
+    <div class="wrapper row0">
+        <header id="header" class="hoc clear">
+            <center>
+                <div id="logo">
+                    <img alt="Brand" src="RESOURCES/Escudo.png" id="logo" style="width: 150px; height: 130px ">
+                </div>
+            </center>
+
+        </header>
+    </div>
+    <!-- ################################################################################################ -->
+    <div class="wrapper row1">
+        <div class="hoc clear">
+            <nav id="mainav">
+                <ul class="clear">
+                    <li><a href="Loggin.html">Login</a></li>
+                    <li class="active"><a href="Register.html">Register</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+    <!-- ################################################################################################ -->
+    <div class="wrapper row3">
+        <main class="hoc container clear">
+            <!-- ################################################################################################ -->
+            <div class="content">
+                <div id="comments">
+                    <form data-toggle="validator">
+                        <div class="one_third first form-group">
+                            <label for="cedula">Identification <span>*</span></label>
+                            <input type="text" class="form-control" name="cedula_name" id="cedula" value="" size="22"
+                                required>
+                        </div>
+                        <div class="one_third form-group">
+                            <label for="name">Name <span>*</span></label>
+                            <input type="text" class="form-control" name="name_name" id="name" value="" size="22"
+                                required>
+                        </div>
+
+                        <div class="one_third form-group">
+                            <label for="lastName">LastName</label>
+                            <input type="text" class="form-control" name="lastName_name" id="lastName" value=""
+                                size="22">
+                        </div>
+                        <div class="form-group">
+                            <label for="EmailDemo">Your Email:</label>
+                            <input type="email" class="form-control" id="mail" aria-describedby="emailHelp"
+                                placeholder="Enter email" required="true">
+                            <small id="emailHelp" class="form-text text-muted">Please enter your primary email, we will
+                                send confirmation email!</small>
+                        </div>
+                        <div class="second_third form-group">
+                            <label for="pass">Password <span>*</span></label>
+                            <input type="password" class="form-control" name="pass_name" id="pass" value="" size="22"
+                                required>
+                        </div>
+                        <center>
+                            <div>
+                                <input type="submit" name="submit" value="Register" onclick="addUser();return false;">
+                            </div>
+                        </center>
+                    </form>
+                </div>
+            
+        </main>
+    </div>
+
+    <!-- ################################################################################################ -->
+    <a id="backtotop" href="#top"><i class="fas fa-chevron-up"></i></a>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    <script src="http://code.jquery.com/jquery.js"></script>
+    <script src="JS/interacction.js"></script>
+    <script src="layout/scripts/jquery.min.js"></script>
+    <script src="layout/scripts/jquery.backtotop.js"></script>
+    <script src="layout/scripts/jquery.mobilemenu.js"></script>
+</body>
+
+</html>

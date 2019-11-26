@@ -1,0 +1,56 @@
+ <div id="comments">
+                        <form>
+                            <div class="one_third first">
+                                <label for="cedula">Name <span>*</span></label>
+                                <input type="text" name="file_name" id="file_name" value="" size="22" required>
+                            </div>
+                            <div class="one_third">
+                                <label for="name">Price <span>*</span></label>
+                                <input type="number" name="price" id="price" value="" size="22" required>
+                            </div>
+
+                            <div class="one_third">
+                                <label for="lastName">Type <span>*</span></label>
+                                <select name="Type_File" id="type_file">
+                                    <option>Documents</option>
+                                    <option>Music</option>
+                                    <option>Video</option>
+                                    <option>AudioBook</option>
+                                </select>
+                            </div>
+                            <div class="second_third first">
+                                <label for="mail">Description <span>*</span></label>
+                                <textarea name="comment" id="description_file" rows="10"></textarea>
+                            </div>
+                        </form>
+                        <!--
+                    <input type="file" id="file-chooser" /> 
+                    <button id="upload-button">Upload to S3</button>
+                    <div id="results"></div>-->
+
+
+                        <div class="second_third ">
+                            <label for="mail">File <span>*</span></label>
+
+                            <!---<form name="form" id="myform"></form>-->
+                            <!--accept=".pdf,.docx,.xlsx,.zip"-->
+                            <input id="file-chooser" type="file" name="file" multiple><span
+                                class="progreso"></span></input>
+
+                            <span style="margin:0px;padding: 0px" id="results"></span>
+                            <br><br>
+                            <center>
+                                <!--app.publishNotify();-->
+                                <input id="upload-button" type="submit" name="submit" value="Publish"
+                                    onclick="addFile();">
+
+                            </center>
+                            <!--<input type="submit" value="Enviar" onclick="">-->
+
+
+                        </div>
+
+
+
+                    </div>
+                    
