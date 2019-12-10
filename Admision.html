@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+    <title>Admision</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link href="../layout/styles/layout.css" rel="stylesheet" type="text/css" media="all">
+    <link rel="stylesheet" type="text/css" href="CSS/style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+        integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.4.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/sockjs-client/1.3.0/sockjs.min.js"></script>
+    <script src=" https://unpkg.com/sweetalert/dist/sweetalert.min.js ">
+    </script>
+    <script src=""></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/stomp.js/2.3.3/stomp.min.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js"></script>
+    <script src="/JS/interacction.js"></script>
+    <script src="JS/notificacion_web.js"></script>
+    <script src="JS/notificacion_web2.js"></script>
+    <link rel="stylesheet" href="/CSS/carrito_counter.css">
+
+</head>
+
+<body id="top">
+
+    <div class="wrapper row0">
+        <header id="header" class="hoc clear">
+            <center>
+                <div id="logo">
+                    <img alt="Brand" src="RESOURCES/Escudo.png">
+                </div>
+            </center>
+        </header>
+    </div>
+    <!-- ################################################################################################ -->
+    <div class="wrapper row1">
+        <div class="hoc clear">
+            <nav id="mainav">
+                <ul class="clear">
+                    <li><a href="Home.html"><i class="fas fa-home"></i>Home</a></li>
+                    <li class="active"><a href="Admision.html"><i class="fas fa-list"></i>Admision y Registro</a></li>
+                    <li><a href="Contratacion.html"><i class="fas fa-file-signature"></i>Contratacion y Presupuesto</a>
+                    </li>
+                    <li><a class="drop"><i class="fas fa-user"></i>
+                            Profile - <span class="nombre_perfil"></span></a>
+                        <ul>
+                            <li><a href="Loggin.html"><i class="fas fa-sign-out-alt"></i> Log out</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+    <!-- ################################################################################################ -->
+    <div class="wrapper row3">
+        <main class="hoc container clear">
+            <!-- ################################################################################################ -->
+            <div class="content second_half">
+                <!-- ################################################################################################ -->
+                <center>
+                    <h1>Proceso de Admision</h1>
+                    <br><br>
+                </center>
+                <br>
+                <form>
+                    <div class="form-row">
+                        <div class="form-group col-md-3">
+                            <h3>Nombres:</h3>
+                            <h5>Juan Nicolas Nontoa Caballero</h5>
+                        </div>
+                        <div class="form-group col-md-3">
+                            <h3>Identificacion:</h3>
+                            <h5>C.C 1020841184</h5>
+                        </div>
+                        <div class="form-group col-md-3">
+                            <h3>Direccion:</h3>
+                            <h5>Cra 25 # 88-65</h5>
+                        </div>
+                        <div class="form-group col-md-3">
+                            <h3>Celular:</h3>
+                            <h5>3103437828 </h5>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-md-3">
+                            <h3>Colegio:</h3>
+                            <h5>Institucion Educativa Emiliani</h5>
+                        </div>
+                        <div class="form-group col-md-3">
+                            <h3>Puntaje ICFES:</h3>
+                            <h5>385 Puntos</h5>
+                        </div>
+                        <div class="form-group col-md-3">
+                            <h3>Ciudad:</h3>
+                            <h5>Bogota</h5>
+                        </div>
+                    </div>
+                    <br>
+                    <br>
+                    <br>
+                    <div class="form-row">
+                        <div class="form-group col-md-3">
+                            <h3>Programa:</h3>
+                            <h5>Pregrado</h5>
+                        </div>
+                        <div class="form-group col-md-3">
+                            <h3>Carrera:</h3>
+                            <h5>Ingenieria de Sistemas</h5>
+                        </div>
+                        <div class="form-group col-md-3">
+                            <h3>Homologacion:</h3>
+                            <h5>No</h5>
+                        </div>
+                        <div class="form-group col-md-3">
+                            <h3>Año de Inicio:</h3>
+                            <h5>2020 - 1 </h5>
+                        </div>
+                    </div>
+                    <br><br>
+                    <form class="form-inline">
+                        <h3>Aprobo Entrevista</h3>
+                        <select class="custom-select my-1 mr-sm-2" id="inlineFormCustomSelectPref">
+                            <option selected>Elige...</option>
+                            <option value="1">Si</option>
+                            <option value="2">No</option>
+                        </select>
+                    </form>
+                    <br><br>
+
+                    <h3>Aprobo Examenes de Conocimiento</h3>
+                    <div class="custom-control custom-radio">
+                        <input type="radio" id="customRadio1" name="customRadio" class="custom-control-input">
+                        <label class="custom-control-label" for="customRadio1">Si</label>
+                    </div>
+                    <div class="custom-control custom-radio">
+                        <input type="radio" id="customRadio2" name="customRadio" class="custom-control-input">
+                        <label class="custom-control-label" for="customRadio2">No</label>
+                    </div>
+
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <center>
+                                <button type="success" class="btn btn-success">Admitido</button>
+                            </center>
+                        </div>
+                        <div class="form-group col-md-6">
+                            <center>
+                                <button type="danger" class="btn btn-danger">No Admitido</button>
+                            </center>
+                        </div>
+                    </div>
+
+                </form>
+            </div>
+            <!-- ################################################################################################ -->
+            <div class="clear"></div>
+        </main>
+    </div>
+
+    <!-- ################################################################################################ -->
+    <a id="backtotop" href="#top"><i class="fas fa-chevron-up"></i></a>
+    <script>
+        //console.log(Cookies.get('name'));
+        $(".nombre_perfil").text(Cookies.get('name'));
+    </script>
+    <script src="layout/scripts/jquery.min.js"></script>
+    <script src="layout/scripts/jquery.backtotop.js"></script>
+    <script src="layout/scripts/jquery.mobilemenu.js"></script>
+
+</body>
+
+</html>

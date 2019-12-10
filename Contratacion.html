@@ -2,7 +2,7 @@
 <html lang="">
 
 <head>
-    <title>Home</title>
+    <title>Contratacion</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <link href="../layout/styles/layout.css" rel="stylesheet" type="text/css" media="all">
@@ -27,7 +27,7 @@
 
 </head>
 
-<body id="top" >
+<body id="top" onload="pagos()">
 
     <div class="wrapper row0">
         <header id="header" class="hoc clear">
@@ -43,9 +43,11 @@
         <div class="hoc clear">
             <nav id="mainav">
                 <ul class="clear">
-                    <li class="active"><a href="Home.html"><i class="fas fa-home"></i>Home</a></li>
+                    <li><a href="Home.html"><i class="fas fa-home"></i>Home</a></li>
                     <li><a href="Admision.html"><i class="fas fa-list"></i>Admision y Registro</a></li>
-                    <li><a href="Contratacion.html"><i class="fas fa-file-signature"></i>Contratacion y Presupuesto</a></li>
+                    <li class="active"><a href="Contratacion.html"><i class="fas fa-file-signature"></i>Contratacion y
+                            Presupuesto</a>
+                    </li>
                     <li><a class="drop"><i class="fas fa-user"></i>
                             Profile - <span class="nombre_perfil"></span></a>
                         <ul>
@@ -63,57 +65,18 @@
             <div class="content second_half">
                 <!-- ################################################################################################ -->
                 <center>
-                    <h1>Busqueda de estudiantes por N° de carne</h1>
+                    <h1>Pagos</h1>
                     <br><br>
-                    <div class="input-group mb-3">
-                        <input type="text" id="Carne_Est" class="form-control" placeholder="Carné" aria-label="Email"
-                            aria-describedby="button-addon2">
-                        <div class="input-group-append">
-                            <button class="btn btn-outline-secondary" type="button" id="button-addon2"
-                                onclick="SearchEstudiante()">Buscar</button>
-                        </div>
-                    </div>
-                    <div id="peopler">
-                        <img alt="Brand" src="RESOURCES/people.png" id="publish"
-                            style="position: relative; width: 230px; height: 300x">
-                    </div>
-                </center>
-                <br>
-                <center>
-                    <h2>Informacion personal</h2>
                 </center>
                 <br>
                 <div class="scrollable">
-                    <table id="table_personal">
+                    <table id="table_pagos">
                         <thead>
                             <tr>
-                                <th>Nombre</th>
-                                <th>Apellido</th>
-                                <th>Cedula</th>
-                                <th>Direccion</th>
-                                <th>Telefono</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-
-                        </tbody>
-                    </table>
-                </div>
-                <br>
-                <center>
-                    <h2>Informacion academica</h2>
-                </center>
-                <br>
-                <div class="scrollable">
-                    <table id="table_academica">
-                        <thead>
-                            <tr>
+                                <th>Estudiante</th>
                                 <th>Carne</th>
-                                <th>Semestre</th>
-                                <th>Programa</th>
                                 <th>Carrera</th>
-                                <th>Materias</th>
-                                <th>Proceso A</th>
+                                <th>Recibo</th>                                
                             </tr>
                         </thead>
                         <tbody>
@@ -121,6 +84,9 @@
                         </tbody>
                     </table>
                 </div>
+                <br>
+
+
             </div>
             <!-- ################################################################################################ -->
             <div class="clear"></div>

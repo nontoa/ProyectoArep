@@ -329,6 +329,64 @@ function goToProfile () {
     })
 }
 
+function pagos(){  
+  axios.get('http://localhost:8081/estudiante/all-estudiantes')
+    .then(function (response) {      
+      llenarTablaPagos(response)
+    })
+    .catch(function (error) {
+      console.log('No existe el estudiante')
+    })
+}
+
+function llenarTablaPagos(response){
+  var info = response.data;
+  $('#table_pagos').find('tbody').empty()
+  a = ' <center> <button type="button" class="btn btn-success" >Generar Recibo</button> </center>'
+  for (var i = 0; i < info.length ; i++){
+    s = '<tr> ' + '<td>' + info[i].nombre + " "+ info[i].apellido + '</td>' +          
+          '<td>' + info[i].carne + '</td>' +
+          '<td>' + info[i].carrera + '</td>' +
+          '<td>' + a+ '</td>' + '</tr>'
+    $('#table_pagos').find('tbody').append(s)    
+  }
+  $('#table_pagos').find('tbody').append()
+}
+
+function SearchEstudiante(){
+  var carne = $('#Carne_Est').val()
+  axios.get('http://localhost:8081/estudiante/'+carne)
+    .then(function (response) {      
+      llenarTablaEstudiante(response)
+    })
+    .catch(function (error) {
+      console.log('No existe el estudiante')
+    })
+
+}
+
+function llenarTablaEstudiante (response) {
+  var info = response.data;
+  $('#table_personal').find('tbody').empty()
+  s = '<tr> ' + '<td>' + info.nombre + '</td>' +
+          '<td>' + info.apellido + '</td>' +
+          '<td>' + info.cedula + '</td>' +
+          '<td>' + info.direccion + '</td>' +
+          '<td>' + info.telefono + '</td>' + '</tr>'
+  $('#table_personal').find('tbody').append(s)
+  $('#table_personal').find('tbody').append()
+
+  $('#table_academica').find('tbody').empty()
+  a = '<tr> ' + '<td>' + info.carne + '</td>' +
+          '<td>' + info.semestre + '</td>' +
+          '<td>' + info.programa + '</td>' +
+          '<td>' + info.carrera + '</td>' +
+          '<td>' + info.materias + '</td>' +
+          '<td>' + info.procesoa + '</td>' + '</tr>'
+  $('#table_academica').find('tbody').append(a)
+  $('#table_academica').find('tbody').append()
+}
+
 function llenarTablaPerfil (response) {
   var lista = response.data.articulosAVender
   $('#table_perfil').find('tbody').empty()
