@@ -30,11 +30,11 @@ function addUser () {
   var apellidoI = $('#lastName').val()
   var emailI = $('#mail').val()
   var passwordI = $('#pass').val().hashCode()
-  axios.get('http://localhost:8081/funcionario/' + emailI)
+  axios.get('http://ec2-54-211-1-148.compute-1.amazonaws.com:8081/funcionario/' + emailI)
     .then(function (response) {
       user = response.data
       if (user.length == 0) { 
-        axios.post('http://localhost:8081/funcionario/create-funcionario', {
+        axios.post('http://ec2-54-211-1-148.compute-1.amazonaws.com:8081/funcionario/create-funcionario', {
           cedula: cedulaI,
           nombre: nombreI,
           apellido: apellidoI,          
@@ -250,7 +250,7 @@ function llenarTablaFollowers () {
 function logearse () {
   var correo_login = $('#email-in').val()
   var pass_login = $('#pass-in').val().hashCode()
-  axios.get('http://localhost:8081/funcionario/' + correo_login)
+  axios.get('http://ec2-54-211-1-148.compute-1.amazonaws.com:8081/funcionario/' + correo_login)
     .then(function (response) {
       if (response.data == 0) {
         $('#user_inco').append('<div class="alert alert-danger alert-dismissible fade show" role="alert">' + '<strong>The user does not exist!!</strong> You should verify your user.' + '<button type="button" class="close" data-dismiss="alert" aria-label="Close">' + '<span aria-hidden="true">&times;</span>' + '</button>' + '</div>')
@@ -330,7 +330,7 @@ function goToProfile () {
 }
 
 function pagos(){  
-  axios.get('http://localhost:8081/estudiante/all-estudiantes')
+  axios.get('http://ec2-54-211-1-148.compute-1.amazonaws.com:8081/estudiante/all-estudiantes')
     .then(function (response) {      
       llenarTablaPagos(response)
     })
@@ -355,7 +355,7 @@ function llenarTablaPagos(response){
 
 function SearchEstudiante(){
   var carne = $('#Carne_Est').val()
-  axios.get('http://localhost:8081/estudiante/'+carne)
+  axios.get('http://ec2-54-211-1-148.compute-1.amazonaws.com:8081/estudiante/'+carne)
     .then(function (response) {      
       llenarTablaEstudiante(response)
     })
