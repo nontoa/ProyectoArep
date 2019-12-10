@@ -30,11 +30,11 @@ function addUser () {
   var apellidoI = $('#lastName').val()
   var emailI = $('#mail').val()
   var passwordI = $('#pass').val().hashCode()
-  axios.get('http://ec2-54-211-1-148.compute-1.amazonaws.com:8081/funcionario/' + emailI)
+  axios.get('https://ec2-54-211-1-148.compute-1.amazonaws.com:8081/funcionario/' + emailI)
     .then(function (response) {
       user = response.data
       if (user.length == 0) { 
-        axios.post('http://ec2-54-211-1-148.compute-1.amazonaws.com:8081/funcionario/create-funcionario', {
+        axios.post('https://ec2-54-211-1-148.compute-1.amazonaws.com:8081/funcionario/create-funcionario', {
           cedula: cedulaI,
           nombre: nombreI,
           apellido: apellidoI,          
